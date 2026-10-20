@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die 8 MEGA-REPOS! — GitHub Trending</title>
+<style>
+  :root{
+    --schwarz:#000;
+    --papier:#fdf6e3;
+    --gelb:#ffe600;
+    --pink:#ff5ea8;
+    --cyan:#00e0e0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    background:var(--papier);
+    color:var(--schwarz);
+  }
+
+  /* ── HEADER ── */
+  header{
+    background:var(--gelb);
+    border-bottom:8px solid var(--schwarz);
+    padding:60px 5vw 70px;
+  }
+  .mega{
+    font-size:clamp(2.4rem, 8vw, 6.5rem);
+    font-weight:900;
+    letter-spacing:-0.03em;
+    line-height:0.95;
+    text-transform:uppercase;
+  }
+  .mega .outline{
+    color:var(--papier);
+    -webkit-text-stroke:3px var(--schwarz);
+    text-shadow:8px 8px 0 var(--schwarz);
+  }
+  .subline{
+    margin-top:28px;
+    display:inline-block;
+    background:var(--schwarz);
+    color:var(--gelb);
+    font-weight:900;
+    font-size:clamp(0.8rem,2vw,1.2rem);
+    text-transform:uppercase;
+    padding:10px 18px;
+    transform:rotate(-1.5deg);
+    box-shadow:8px 8px 0 var(--pink);
+  }
+
+  /* ── TICKER ── */
+  .ticker{
+    border-bottom:8px solid var(--schwarz);
+    background:var(--schwarz);
+    color:var(--papier);
+    overflow:hidden;
+    white-space:nowrap;
+    font-weight:900;
+    text-transform:uppercase;
+    font-size:1rem;
+    padding:12px 0;
+  }
+  .ticker span{
+    display:inline-block;
+    animation:roll 18s linear infinite;
+  }
+  @keyframes roll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+
+  /* ── GRID ── */
+  main{
+    padding:60px 5vw 80px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+    gap:44px;
+  }
+  .card{
+    background:var(--papier);
+    border:6px solid var(--schwarz);
+    box-shadow:8px 8px 0 #000;
+    padding:28px 24px 24px;
+    position:relative;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .card:hover{
+    transform:translate(-4px,-4px);
+    box-shadow:14px 14px 0 #000;
+  }
+  .card:nth-child(3n+1){background:var(--gelb);}
+  .card:nth-child(3n+2){background:var(--pink);}
+  .card:nth-child(3n){background:var(--cyan);}
+
+  /* Sticker-Badge */
+  .badge{
+    position:absolute;
+    top:-22px; right:-14px;
+    background:var(--schwarz);
+    color:var(--papier);
+    font-weight:900;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    padding:8px 14px;
+    transform:rotate(6deg);
+    border:3px solid var(--schwarz);
+    box-shadow:4px 4px 0 var(--papier);
+  }
+  .nummer{
+    font-size:3rem;
+    font-weight:900;
+    line-height:1;
+    margin-bottom:10px;
+    text-shadow:4px 4px 0 var(--papier);
+  }
+  .card h2{
+    font-size:1.7rem;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:-0.02em;
+    line-height:1.05;
+    margin-bottom:4px;
+    word-break:break-word;
+  }
+  .repo{
+    display:inline-block;
+    background:var(--schwarz);
+    color:var(--papier);
+    font-size:0.8rem;
+    font-weight:900;
+    padding:5px 10px;
+    margin:10px 0 16px;
+    transform:rotate(-1deg);
+  }
+  .card p{
+    font-family:Arial, sans-serif;
+    font-weight:700;
+    font-size:0.95rem;
+    line-height:1.5;
+    margin-bottom:18px;
+  }
+  .facts{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .facts span{
+    background:var(--papier);
+    border:3px solid var(--schwarz);
+    font-weight:900;
+    font-size:0.75rem;
+    text-transform:uppercase;
+    padding:4px 10px;
+    box-shadow:3px 3px 0 #000;
+  }
+
+  /* ── FOOTER ── */
+  footer{
+    background:var(--schwarz);
+    color:var(--papier);
+    border-top:8px solid var(--schwarz);
+    padding:50px 5vw;
+    text-align:center;
+  }
+  footer .mega{font-size:clamp(1.4rem,4vw,2.6rem);}
+  footer p{
+    margin-top:16px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:0.15em;
+    font-size:0.85rem;
+    color:var(--gelb);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="mega">Die <span class="outline">8 MEGA-</span><br>REPOS!</h1>
+  <div class="subline">GitHub Trending — KNALLHART DURCHGEZÄHLT!</div>
+</header>
+
+<div class="ticker">
+  <span>★ 100% EXKLUSIV ★ 8 REPOS ★ 0 KOMPROMISSE ★ KEIN BLABLA ★ HANDGEBAUT OHNE FRAMEWORK ★ TRENDING ALARM ★&nbsp;★ 100% EXKLUSIV ★ 8 REPOS ★ 0 KOMPROMISSE ★ KEIN BLABLA ★ HANDGEBAUT OHNE FRAMEWORK ★ TRENDING ALARM ★&nbsp;</span>
+</div>
+
+<main>
+  <div class="grid">
+
+    <article class="card">
+      <div class="badge">PLATZ 1</div>
+      <div class="nummer">01</div>
+      <h2>React</h2>
+      <span class="repo">facebook/react</span>
+      <p>Die UI-Bibliothek schlechthin. Deklarativ, komponentenbasiert, überall im Einsatz. Ein Klassiker, der einfach nicht totzukriegen ist.</p>
+      <div class="facts"><span>JavaScript</span><span>★ 234k</span></div>
+    </article>
+
+    <article class="card">
+      <div class="badge">PLATZ 2</div>
+      <div class="nummer">02</div>
+      <h2>VS Code</h2>
+      <span class="repo">microsoft/vscode</span>
+      <p>Der Editor, den fast jeder täglich aufreißt. Riesiges Extension-Ökosystem, Open Source, extrem aktiv. Kein Code ohne ihn.</p>
+      <div class="facts"><span>TypeScript</span><span>★ 170k</span></div>
+    </article>
+
+    <article class="card">
+      <div class="badge">PLATZ 3</div>
+      <div class="nummer">03</div>
+      <h2>Rust</h2>
+      <span class="repo">rust-lang/rust</span>
+      <p>Ownership, Borrow-Checker, Speed! Die Sprache, die Systemsicherheit ernst nimmt. Der Compiler ist streng — aber gerecht.</p>
+      <div class="facts"><span>Rust</span><span>★ 103k</span></div>
+    </article>
+
+    <article class="card">
+      <div class="badge">PLATZ 4</div>
+      <div class="nummer">04</div>
+      <h2>Ollama</h2>
+      <span class="repo">ollama/ollama</span>
+      <p>Große Sprachmodelle direkt auf deinem eigenen Rechner! Kein Cloud-Zwang, einfach runterladen und loslegen. Lokal ist das neue Hedge-Fund.</p>
+      <div class="facts"><span>Go</span><span>★ 144k</span></div>
+    </article>
+
+    <article class="card">
+      <div class="badge">PLATZ 5</div>
+      <div class="nummer">05</div>
+      <h2>Browser Use</h2>
+      <span class="repo">browser-use/browser-use</span>
+      <p>KI-Agents, die deinen Browser steuern wie ein echter Mensch: klicken, tippen, navigieren. Web-Automation neu gedacht.</p>
+      <div class="facts"><span>Python</span><span>★ 68k</span></div>
+    </article>
+
+    <article class="card">
+      <div class="badge">PLATZ 6</div>
+      <div class="nummer">06</div>
+      <h2>STORM</h2>
+      <span class="repo">stanford-oval/storm</span>
+      <p>Wikipedia-artige Artikel komplett von KI schreiben lassen! Aus Stanford, forschungsnah, brutal gut bei Recherche-Pipelines.</p>
+      <div class="facts"><span>Python</span><span>★ 24k</span></div>
+    </article>
+
+    <article class="card">
+      <div class="badge">PLATZ 7</div>
+      <div class="nummer">07</div>
+      <h2>Transformers</h2>
+      <span class="repo">huggingface/transformers</span>
+      <p>Tausende vortrainierte Modelle, eine API. Das Schweizer Taschenmesser für Machine Learning. 🤗 Einfach pip installieren!</p>
+      <div class="facts"><span>Python</span><span>★ 144k</span></div>
+    </article>
+
+    <article class="card">
+      <div class="badge">PLATZ 8</div>
+      <div class="nummer">08</div>
+      <h2>CPython</h2>
+      <span class="repo">python/cpython</span>
+      <p>Das Original: die Referenz-Implementierung von Python. Hier wird jede Zeile deiner Scripts wirklich ausgeführt. Respekt!</p>
+      <div class="facts"><span>Python / C</span><span>★ 66k</span></div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <p class="mega">MEHR GEHT NICHT!</p>
+  <p>— GitHub Trending Übersicht — Handgebaut. Ohne CDN. Ohne Gnade. —</p>
+</footer>
+
+</body>
+</html>
